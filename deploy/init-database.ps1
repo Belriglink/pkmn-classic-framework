@@ -43,5 +43,5 @@ if ($mysql) {
     Write-Host "  3. Install mysql client: choco install mysql-cli (if chocolatey installed)" -ForegroundColor Yellow
     Write-Host ""
     Write-Host "  SQL file location: $SqlFile" -ForegroundColor Yellow
-    Write-Host "  Target database:  $Database on $RdsHost:$RdsPort" -ForegroundColor Yellow
+    Write-Host "  Target database:  $Database on ${RdsHost}:${RdsPort}" -ForegroundColor Yellow
 }
