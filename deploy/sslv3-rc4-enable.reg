@@ -1,0 +1,43 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+; Enable SSL 3.0 protocol (required by Nintendo DS Gen5 GTS)
+; ============================================================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0]
+"Enabled"=dword:ffffffff
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client]
+"Enabled"=dword:ffffffff
+"DisabledByDefault"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server]
+"Enabled"=dword:ffffffff
+"DisabledByDefault"=dword:00000000
+
+; ============================================================
+; Enable RC4 cipher suites (required by Nintendo DS)
+; The DS uses: TLS_RSA_WITH_RC4_128_MD5 (0x0004) / TLS_RSA_WITH_RC4_128_SHA (0x0005)
+; ============================================================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128]
+"Enabled"=dword:ffffffff
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128]
+"Enabled"=dword:ffffffff
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128]
+"Enabled"=dword:ffffffff
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 64/128]
+"Enabled"=dword:ffffffff
+
+; ============================================================
+; Enable MD5 hash (required by RC4-MD5 cipher)
+; ============================================================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Hashes\MD5]
+"Enabled"=dword:ffffffff
+
+; ============================================================
+; Enable PKCS key exchange algorithm
+; ============================================================
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS]
+"Enabled"=dword:ffffffff
