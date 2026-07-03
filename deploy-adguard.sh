@@ -99,7 +99,7 @@ AUTH_HEADER="Authorization: Basic $(echo -n "$ADMIN_USER:$ADMIN_PASS" | base64 -
 python3 << PYEOF
 import json, urllib.request, base64
 
-auth = base64.b64encode(b"$ADMIN_USER:$ADMIN_PASS".encode()).decode()
+auth = base64.b64encode(("$ADMIN_USER:$ADMIN_PASS").encode()).decode()
 headers = {
     "Content-Type": "application/json",
     "Authorization": "Basic " + auth
@@ -129,7 +129,7 @@ echo "[5/8] Configuring Nintendo WFC DNS rewrites..."
 python3 << PYEOF
 import json, urllib.request, base64
 
-auth = base64.b64encode(b"$ADMIN_USER:$ADMIN_PASS".encode()).decode()
+auth = base64.b64encode(("$ADMIN_USER:$ADMIN_PASS").encode()).decode()
 headers = {
     "Content-Type": "application/json",
     "Authorization": "Basic " + auth
