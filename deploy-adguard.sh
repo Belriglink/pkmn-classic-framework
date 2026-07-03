@@ -149,7 +149,7 @@ rewrites = [
     ("pkvldtprod.nintendo.co.jp", "$GTS_PUBLIC_IP"),
     ("nas.nintendowifi.net", "$KAERU_DNS"),
     ("naswii.nintendowifi.net", "$KAERU_DNS"),
-    ("conntest.nintendowifi.net", "69.25.139.140"),
+    ("conntest.nintendowifi.net", "198.62.122.140"),
 ]
 
 for domain, answer in rewrites:
